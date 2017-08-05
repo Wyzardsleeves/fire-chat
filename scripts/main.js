@@ -1,3 +1,9 @@
+//Authorization
+const auth = firebase.auth();
+auth.signInWithEmailAndPassword(email, pass); //signs in exiting user
+auth.createUserWithEmailAndPassword(email, pass); //creates a user
+auth.onAuthStateChanged(firebaseUser => { });
+
 //initial test
 var getTest = document.getElementsByClassName('test')[0];
 var databaseRef = firebase.database().ref().child('text');
@@ -14,7 +20,7 @@ databaseRef.on('value', snap => getMessages.innerText = snap.val());
 var current_user = '';
 
 //grabs array from firebase
-var messages = firebase.database().ref('messages')
+var messages = firebase.database().ref('messages');
 
 //submit button
 var field_content = document.getElementsById('message_field').value;

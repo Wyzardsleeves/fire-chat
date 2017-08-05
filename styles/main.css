@@ -14,6 +14,15 @@ body{
   margin: 0 auto;
 }
 
-.message{
+/* login part */
+.login-components{
+  float: right;
+}
+#email-field, #password-field{
+  border-radius: 5px;
+}
+
+/* messaging part */
+#message-field{
   width: 60%;
 }

@@ -14,15 +14,35 @@ body{
   margin: 0 auto;
 }
 
+.head-title{
+}
+
 /* login part */
 .login-components{
+  display: block;
   float: right;
 }
+
 #email-field, #password-field{
   border-radius: 5px;
+}
+
+/* central body */
+.main-part{
+  clear: both;
+}
+
+.list-msg{
+  list-style: none;
 }
 
 /* messaging part */
 #message-field{
   width: 60%;
+}
+
+.data-entry{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }

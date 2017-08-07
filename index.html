@@ -8,39 +8,40 @@
   </head>
   <body>
     <section class="head-part">
+      <div class="head-title">
+        <h1>Welcome to Fire Chat</h1>
+      </div>
       <div class="login-components">
         <form>
           <input type="text" name="email" id="email-field" placeholder="email here">
           <input type="text" name="password" id="password-field" placeholder="password here">
-          <button name="email" class="submit-form">Submit</button>
+          <button name="log-button" id="login-button">Submit</button>
         </form>
-      </div>
-      <div>
-        <h1>Welcome to Fire Chat</h1>
       </div>
     </section>
     <section class="main-part">
       <div class="dialouge">
-        <p class="test"></p>
+        <h2 class="test"></h2>
       </div>
-      <div class="roomContents">
-        <ul>
-          <li></li>
+      <div class="room-contents">
+        <ul class="list-msg">
+          <li class="testy">msg placeholder</li>
         </ul>
       </div>
     </section>
     <section class="foot-part">
       <div class="data-entry">
-        <form>
+        <form id="message-form">
           Message:
           <input type="text" name="message" id="message-field" placeholder="Type message here">
-          <input type="submit" value="Send" id="send-button">
+          <button type="button" id="send-button">Submit</button>
         </form>
       </div>
       <div>
 
       </div>
     </section>
+
     <!-- Riot -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.6.1/riot.min.js"></script>
 

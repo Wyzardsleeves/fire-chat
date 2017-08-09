@@ -12,10 +12,12 @@
         <h1>Welcome to Fire Chat</h1>
       </div>
       <div class="login-components">
-        <form>
+        <form id="login-form">
           <input type="text" name="email" id="email-field" placeholder="email here">
           <input type="text" name="password" id="password-field" placeholder="password here">
-          <button name="log-button" id="login-button">Submit</button>
+          <button type="button" name="login-button" id="logIn-button">Log In</button>
+          <button type="button" name="signup-button" id="signUp-button">Sign Up</button>
+          <button type="button" name="logout-button" id="logOut-button">Log Out</button>
         </form>
       </div>
     </section>
@@ -46,7 +48,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.6.1/riot.min.js"></script>
 
     <!-- Firebase -->
-    <!-- <script src="https.cdn.firebase.com/js/client/2.2.1/firebase.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 
     <script>

@@ -33,6 +33,7 @@ var buttonLogIn = document.getElementById('logIn-button');
 var buttonLogOut = document.getElementById('logOut-button');
 var buttonSignUp = document.getElementById('signUp-button');
 var loginForm = document.getElementById('login-form');
+var loggedUser = document.getElementById('logged-user');
 
 //login
 buttonLogIn.addEventListener('click', e => {
@@ -64,24 +65,33 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser != null){
     checkUserName();
     console.log(firebaseUser);
+    var loggedIn = 'Logged in as <span style="color:red;">' + firebase.auth().currentUser.email + '</span>';
+    loggedUser.innerHTML = loggedIn;
   }
   else{
     console.log("nothing");
   }
+
   showLogin();
 });
 
 //shows and hides login elements
 function showLogin(){
   if(firebase.auth().currentUser){
+    fieldEmail.style.display = "none";
+    fieldPassword.style.display = "none";
     buttonLogIn.style.display = "none";
     buttonSignUp.style.display = "none";
     //outlier
+    loggedUser.style.display = "inline";
     buttonLogOut.style.display = "inline";
   }
   else{
+    loggedUser.style.display = "none";
     buttonLogOut.style.display = "none";
     //outlier
+    fieldEmail.style.display = "inline";
+    fieldPassword.style.display = "inline";
     buttonLogIn.style.display = "inline";
     buttonSignUp.style.display = "inline";
   }
